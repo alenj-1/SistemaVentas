@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/API/">
+    <Project Path="SistemaVentas.Api/SistemaVentas.Api.csproj" />
+  </Folder>
+  <Folder Name="/Data/">
+    <Project Path="SistemaVentas.Data/SistemaVentas.Data.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="SistemaVentas.Infrastructure/SistemaVentas.Infrastructure.csproj" />
+  </Folder>
+  <Project Path="SistemaVentas.WorkerService/SistemaVentas.WorkerService.csproj" />
+</Solution>
