@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Entities.Datawarehouse.Dimensions
 {
-    internal class DimLocation
+    public class DimLocation
     {
+        public int LocationKey { get; set; }
+        public string Country { get; set; } = string.Empty;
+        public string City { get; set; } = string.Empty;
     }
 }

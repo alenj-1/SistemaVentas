@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Entities.Api
 {
-    internal class ReviewApi
+    public class ReviewApi
     {
+        public int ReviewId { get; set; }
+        public int ProductId { get; set; }
+        public int CustomerId { get; set; }
+        public int Rating { get; set; }
+        public string Comment { get; set; } = string.Empty;
+        public DateTime ReviewDate { get; set; }
     }
 }

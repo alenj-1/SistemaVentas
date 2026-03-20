@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Entities.Database
 {
-    internal class ProductDb
+    public class ProductDb
     {
+        public int ProductID { get; set; }
+        public string ProductName { get; set; } = string.Empty;
+        public int? CategoryID { get; set; }
+        public string? Category { get; set; }
+        public decimal Price { get; set; }
+        public int Stock { get; set; }
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Entities.Database
 {
-    internal class CityDb
+    public class CityDb
     {
+        public int CityID { get; set; }
+        public string City { get; set; } = string.Empty;
+        public int CountryID { get; set; }
+        public string Country { get; set; } = string.Empty;
     }
 }

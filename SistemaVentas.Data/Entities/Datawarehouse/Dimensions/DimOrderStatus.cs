@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Entities.Datawarehouse.Dimensions
 {
-    internal class DimOrderStatus
+    public class DimOrderStatus
     {
+        public int StatusKey { get; set; }
+        public string StatusName { get; set; } = string.Empty;
     }
 }

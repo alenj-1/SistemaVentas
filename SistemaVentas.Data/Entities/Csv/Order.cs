@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Entities.Csv
 {
-    internal class Order
+    public class Order
     {
+        public int OrderID { get; set; }
+        public int CustomerID { get; set; }
+        public DateTime OrderDate { get; set; }
+        public string Status { get; set; } = string.Empty;
     }
 }

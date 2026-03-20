@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Entities.Database
 {
-    internal class OrderDetailsDb
+    public class OrderDetailsDb
     {
+        public int OrderDetailsID { get; set; }
+        public int OrderID { get; set; }
+        public int ProductID { get; set; }
+        public int Quantity { get; set; }
+        public decimal UnitPrice { get; set; }
     }
 }

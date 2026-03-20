@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Interfaces
 {
-    internal interface IStagingService
+    public interface IStagingService
     {
+        Task SaveAsync<T>(
+            string sourceName,
+            IEnumerable<T> data,
+            CancellationToken cancellationToken = default
+            );
     }
 }

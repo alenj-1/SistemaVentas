@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Entities.Datawarehouse.Dimensions
 {
-    internal class DimCategory
+    public class DimCategory
     {
+        public int CategoryKey { get; set; }
+        public string CategoryName { get; set; } = string.Empty;
     }
 }

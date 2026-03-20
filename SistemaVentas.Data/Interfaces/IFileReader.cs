@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Interfaces
 {
-    internal interface IFileReader
+    public interface IFileReader
     {
+        Task<IEnumerable<T>> ReadAsync<T>(string filePath, CancellationToken cancellationToken = default);
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Entities.Database
 {
-    internal class OrderStatusDb
+    public class OrderStatusDb
     {
+        public int StatusID { get; set; }
+        public string Status { get; set; } = string.Empty;
     }
 }

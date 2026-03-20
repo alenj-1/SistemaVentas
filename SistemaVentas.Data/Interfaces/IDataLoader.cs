@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Interfaces
 {
-    internal interface IDataLoader
+    public interface IDataLoader
     {
+        Task LoadAsync(CancellationToken cancellationToken = default);  
     }
 }

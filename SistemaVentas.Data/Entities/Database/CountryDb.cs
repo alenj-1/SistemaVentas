@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Entities.Database
 {
-    internal class CountryDb
+    public class CountryDb
     {
+        public int CountryID { get; set; }
+        public string Country { get; set; } = string.Empty;
     }
 }

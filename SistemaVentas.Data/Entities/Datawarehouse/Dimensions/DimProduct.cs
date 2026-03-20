@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Entities.Datawarehouse.Dimensions
 {
-    internal class DimProduct
+    public class DimProduct
     {
+        public int ProductKey { get; set; }
+        public int ProductID_NaturalKey { get; set; }
+        public string ProductName { get; set; } = string.Empty;
+        public int? CategoryKey { get; set; }
+        public decimal ListPrice { get; set; }
+        public int Stock { get; set; }
     }
 }
