@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SistemaVentas.Application.Models;
 
-namespace SistemaVentas.Data.Interfaces
+namespace SistemaVentas.Application.Interfaces
 {
     public interface IStagingService
     {
-        Task SaveAsync<T>(
-            string sourceName,
-            IEnumerable<T> data,
-            CancellationToken cancellationToken = default
-            );
+        Task<StagingFileResult> SaveAsync<T>(IEnumerable<T> data, string fileName, CancellationToken cancellationToken = default);
     }
 }

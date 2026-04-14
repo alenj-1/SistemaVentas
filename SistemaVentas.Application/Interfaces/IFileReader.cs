@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Data.Interfaces
+﻿namespace SistemaVentas.Application.Interfaces
 {
-    public interface IFileReader
+    public interface IFileReader<T>
     {
-        Task<IEnumerable<T>> ReadAsync<T>(string filePath, CancellationToken cancellationToken = default);
+        Task<List<T>> ReadAsync(string filePath, CancellationToken cancellationToken = default);
     }
 }

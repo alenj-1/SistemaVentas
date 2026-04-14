@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Application.SourceModels.Csv
+﻿namespace SistemaVentas.Application.SourceModels.Csv
 {
     public class Product
     {

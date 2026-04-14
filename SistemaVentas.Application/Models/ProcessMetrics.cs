@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Data.Models
+﻿namespace SistemaVentas.Application.Models
 {
-    internal class ProcessMetrics
+    public class ProcessMetrics
     {
+        public DateTime StartedAt { get; set; }
+        public DateTime EndedAt { get; set; }
+        public int TotalSources { get; set; }
+        public int TotalRecords { get; set; }
+        public long TotalDurationInMilliseconds { get; set; }
+        public List<ExtractionResult> Results { get; set; } = new();
     }
 }
