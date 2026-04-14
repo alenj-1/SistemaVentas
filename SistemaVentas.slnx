@@ -2,11 +2,14 @@
   <Folder Name="/API/">
     <Project Path="SistemaVentas.Api/SistemaVentas.Api.csproj" />
   </Folder>
-  <Folder Name="/Data/">
-    <Project Path="SistemaVentas.Data/SistemaVentas.Data.csproj" />
+  <Folder Name="/Core/">
+    <Project Path="SistemaVentas.Application/SistemaVentas.Application.csproj" />
   </Folder>
   <Folder Name="/Infrastructure/">
     <Project Path="SistemaVentas.Infrastructure/SistemaVentas.Infrastructure.csproj" />
+    <Project Path="SistemaVentas.Persistence/SistemaVentas.Persistence.csproj" />
   </Folder>
-  <Project Path="SistemaVentas.WorkerService/SistemaVentas.WorkerService.csproj" />
+  <Folder Name="/Process/">
+    <Project Path="SistemaVentas.WorkerService/SistemaVentas.WorkerService.csproj" />
+  </Folder>
 </Solution>

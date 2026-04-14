@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Infrastructure.Helpers
+﻿namespace SistemaVentas.Application.Common
 {
-    internal class DateKeyHelper
+    public static class DateKeyHelper
     {
+        public static int GetDateKey(DateTime date)
+        {
+            return int.Parse(date.ToString("yyyyMMdd"));
+        }
     }
 }

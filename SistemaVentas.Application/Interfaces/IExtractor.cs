@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SistemaVentas.Application.Models;
 
-namespace SistemaVentas.Data.Interfaces
+namespace SistemaVentas.Application.Interfaces
 {
-    public interface IExtractor<T>
+    public interface IExtractor
     {
-        Task<IEnumerable<T>> Extract(CancellationToken cancellationToken = default);
+        string SourceName { get; }
+        Task<ExtractionResult> ExtractAsync(CancellationToken cancellationToken = default);
     }
 }

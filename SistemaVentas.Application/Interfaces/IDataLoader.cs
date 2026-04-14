@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Data.Interfaces
+﻿namespace SistemaVentas.Application.Interfaces
 {
     public interface IDataLoader
     {
-        Task LoadAsync(CancellationToken cancellationToken = default);  
+        Task LoadAsync<T>(IEnumerable<T> data, string destinationName, CancellationToken cancellationToken = default); 
     }
 }

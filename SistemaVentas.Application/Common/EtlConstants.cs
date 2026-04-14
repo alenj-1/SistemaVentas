@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Application.Common
+﻿namespace SistemaVentas.Application.Common
 {
-    internal class EtlConstants
+    public class EtlConstants
     {
+        public const string CustomersCsv = "customers.csv";
+        public const string ProductsCsv = "products.csv";
+        public const string OrdersCsv = "orders.csv";
+        public const string OrdersDetailsCsv = "orders_details.csv";
+        public const string OrderTracking = "OrderTracking";
+        public const string DatabaseSource = "DW_Sistema_Ventas";
+        public const string DefaultStagingFolder = "staging";
     }
 }
