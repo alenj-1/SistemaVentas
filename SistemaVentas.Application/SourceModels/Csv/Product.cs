@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaVentas.Data.Entities.Csv
+namespace SistemaVentas.Application.SourceModels.Csv
 {
     public class Product
     {

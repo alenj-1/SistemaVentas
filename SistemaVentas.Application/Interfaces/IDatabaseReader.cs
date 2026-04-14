@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaVentas.Data.Interfaces
+namespace SistemaVentas.Application.Interfaces
 {
     public interface IDatabaseReader
     {

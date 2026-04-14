@@ -1,6 +1,6 @@
 ﻿namespace SistemaVentas.Api.Data
 {
-    public class ReviewsData
+    public class OrderTrackingData
     {
     }
 }

@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.Data.Interfaces
 {
-    public interface IApiClient
+    internal class ILoggerService
     {
-        Task<IEnumerable<T>> GetAsync<T>(string endpoint, CancellationToken cancellationToken = default);
     }
 }
