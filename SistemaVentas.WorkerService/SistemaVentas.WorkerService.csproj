@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaVentas.Application\SistemaVentas.Application.csproj" />
+    <ProjectReference Include="..\SistemaVentas.Infrastructure\SistemaVentas.Infrastructure.csproj" />
+    <ProjectReference Include="..\SistemaVentas.Persistence\SistemaVentas.Persistence.csproj" />
   </ItemGroup>
 </Project>
