@@ -1,12 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.Logging;
+using SistemaVentas.Application.Interfaces;
 
 namespace SistemaVentas.Infrastructure.Services
 {
-    internal class LoggerService
+    public class LoggerService : ILoggerService
     {
+        private readonly ILogger<LoggerService> _logger;
+
+        public LoggerService(ILogger<LoggerService> logger)
+        {
+            _logger = logger;
+        }
+
+
+        // Registra un mensaje informativo
+        public void LogInformation(string message)
+        {
+            _logger.LogInformation(message);
+        }
+
+
+        // Registra una advertencia
+        public void LogWarning(string message)
+        {
+            _logger.LogWarning(message);
+        }
+
+
+        // Registra un error
+        public void LogError(string message, Exception? exception = null)
+        {
+            _logger.LogError(exception, message);
+        }
     }
 }

@@ -4,6 +4,6 @@ namespace SistemaVentas.Application.Interfaces
 {
     public interface IStagingService
     {
-        Task<StagingFileResult> SaveAsync<T>(IEnumerable<T> data, string fileName, CancellationToken cancellationToken = default);
+        Task<StagingFileResult> SaveAsync<T>(T data, string fileName, CancellationToken cancellationToken = default);
     }
 }
