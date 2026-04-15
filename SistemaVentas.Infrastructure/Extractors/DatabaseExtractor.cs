@@ -14,7 +14,8 @@ namespace SistemaVentas.Infrastructure.Extractors
 
         private readonly DatabaseSettings _databaseSettings;
 
-        public string SourceName => "Relational Database";
+
+        public string SourceName => "Data Warehouse";
 
 
         public DatabaseExtractor(
@@ -30,7 +31,7 @@ namespace SistemaVentas.Infrastructure.Extractors
         }
 
 
-        // Ejecuta la extracción desde la base de datos y guarda el resultado en staging
+        // Ejecuta la extracción y guarda el resultado en staging
         public async Task<ExtractionResult> ExtractAsync(CancellationToken cancellationToken = default)
         {
             var startedAt = DateTime.Now;
@@ -39,23 +40,24 @@ namespace SistemaVentas.Infrastructure.Extractors
 
             try
             {
-                _loggerService.LogInformation("Starting Extraction from database...");
+                _loggerService.LogInformation("Starting Extraction process...");
 
+                // Se ejecuta el query
                 var data = await _databaseReader.ReadAsync(_databaseSettings.ExtractionQuery, cancellationToken);
 
                 // Se guarda el resultado en staging
-                var stagingResult = await _stagingService.SaveAsync(data, "database_extraction.json", cancellationToken);
+                var stagingResult = await _stagingService.SaveAsync(data, "dw_extraction.json", cancellationToken);
 
                 stopwatch.Stop();
 
-                _loggerService.LogInformation("Database extraction completed successfully.");
+                _loggerService.LogInformation("Extraction completed successfully.");
 
                 return new ExtractionResult
                 {
                     SourceName = SourceName,
                     WasSuccessful = true,
                     RecordsExtracted = data.Count,
-                    Message = "Database extraction completed successfully.",
+                    Message = "Extraction completed successfully.",
                     StagingFilePath = stagingResult.FilePath,
                     StartedAt = startedAt,
                     EndedAt = DateTime.Now,
@@ -66,7 +68,7 @@ namespace SistemaVentas.Infrastructure.Extractors
             {
                 stopwatch.Stop();
 
-                _loggerService.LogError("Error during extraction from the database.", ex);
+                _loggerService.LogError("Error during extraction process.", ex);
 
                 return new ExtractionResult
                 {
