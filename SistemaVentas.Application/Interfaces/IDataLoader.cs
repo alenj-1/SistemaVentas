@@ -2,6 +2,6 @@
 {
     public interface IDataLoader
     {
-        Task LoadAsync<T>(IEnumerable<T> data, string destinationName, CancellationToken cancellationToken = default); 
+        Task LoadAsync<T>(IEnumerable<T> data, string destinationName, CancellationToken cancellationToken = default) where T : class; 
     }
 }

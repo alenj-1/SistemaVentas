@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Data.Entities.Database
+﻿namespace SistemaVentas.Persistence.Entities.Database
 {
     public class CustomerDb
     {
@@ -14,7 +8,7 @@ namespace SistemaVentas.Data.Entities.Database
         public string? Email { get; set; }
         public string? Phone { get; set; }
         public int? CityID { get; set; }
-        public string? City { get; set; }
-        public string? Country { get; set; }
+        public CityDb? CityNavigation { get; set; }
+        public ICollection<OrderDb> Orders { get; set; } = new List<OrderDb>();
     }
 }

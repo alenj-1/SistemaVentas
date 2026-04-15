@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Data.Entities.Database
+﻿namespace SistemaVentas.Persistence.Entities.Database
 {
     public class CityDb
     {
         public int CityID { get; set; }
         public string City { get; set; } = string.Empty;
         public int CountryID { get; set; }
-        public string Country { get; set; } = string.Empty;
+        public CountryDb? CountryNavigation { get; set; }
+        public ICollection<CustomerDb> Customers { get; set; } = new List<CustomerDb>();
     }
 }

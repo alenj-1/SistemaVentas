@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Data.Entities.Datawarehouse.Dimensions
+﻿namespace SistemaVentas.Persistence.Entities.Datawarehouse.Dimensions
 {
     public class DimCustomer
     {
@@ -15,5 +9,7 @@ namespace SistemaVentas.Data.Entities.Datawarehouse.Dimensions
         public string? Email { get; set; }
         public string? Phone { get; set; }
         public int? LocationKey { get; set; }
+        public DimLocation? LocationNavigation { get; set; }
+        public ICollection<Facts.FactSales> FactSales { get; set; } = new List<Facts.FactSales>();
     }
 }

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SistemaVentas.Persistence.Entities.Datawarehouse.Dimensions;
 
-namespace SistemaVentas.Data.Entities.Datawarehouse.Facts
+namespace SistemaVentas.Persistence.Entities.Datawarehouse.Facts
 {
     public class FactSales
     {
@@ -18,5 +14,10 @@ namespace SistemaVentas.Data.Entities.Datawarehouse.Facts
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal SalesAmount { get; set; }
+        public DimDate? DateNavigation { get; set; }
+        public DimCustomer? CustomerNavigation { get; set; }
+        public DimProduct? ProductNavigation { get; set; }
+        public DimLocation? LocationNavigation { get; set; }
+        public DimOrderStatus? StatusNavigation { get; set; }
     }
 }
