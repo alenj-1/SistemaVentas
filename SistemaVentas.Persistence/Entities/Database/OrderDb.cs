@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Data.Entities.Database
+﻿namespace SistemaVentas.Persistence.Entities.Database
 {
     public class OrderDb
     {
@@ -12,6 +6,8 @@ namespace SistemaVentas.Data.Entities.Database
         public int CustomerID { get; set; }
         public DateTime OrderDate { get; set; }
         public int StatusID { get; set; }
-        public string Status { get; set; } = string.Empty;
+        public CustomerDb? CustomerNavigation { get; set; }
+        public OrderStatusDb? StatusNavigation { get; set; }
+        public ICollection<OrderDetailsDb> OrderDetails { get; set; } = new List<OrderDetailsDb>();
     }
 }

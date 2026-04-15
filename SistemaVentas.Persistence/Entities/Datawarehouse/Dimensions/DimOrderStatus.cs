@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Data.Entities.Datawarehouse.Dimensions
+﻿namespace SistemaVentas.Persistence.Entities.Datawarehouse.Dimensions
 {
     public class DimOrderStatus
     {
         public int StatusKey { get; set; }
         public string StatusName { get; set; } = string.Empty;
+        public ICollection<Facts.FactSales> FactSales { get; set; } = new List<Facts.FactSales>();
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Data.Entities.Datawarehouse.Dimensions
+﻿namespace SistemaVentas.Persistence.Entities.Datawarehouse.Dimensions
 {
     public class DimProduct
     {
@@ -14,5 +8,7 @@ namespace SistemaVentas.Data.Entities.Datawarehouse.Dimensions
         public int? CategoryKey { get; set; }
         public decimal ListPrice { get; set; }
         public int Stock { get; set; }
+        public DimCategory? CategoryNavigation { get; set; }
+        public ICollection<Facts.FactSales> FactSales { get; set; } = new List<Facts.FactSales>();
     }
 }

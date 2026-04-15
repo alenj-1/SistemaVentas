@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Data.Entities.Datawarehouse.Dimensions
+﻿namespace SistemaVentas.Persistence.Entities.Datawarehouse.Dimensions
 {
     public class DimDate
     {
@@ -16,5 +10,6 @@ namespace SistemaVentas.Data.Entities.Datawarehouse.Dimensions
         public string MonthName { get; set; } = string.Empty;
         public byte DayOfMonth { get; set; }
         public string DayName { get; set; } = string.Empty;
+        public ICollection<Facts.FactSales> FactSales { get; set; } = new List<Facts.FactSales>();
     }
 }
