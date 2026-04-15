@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Infrastructure.Settings
+﻿namespace SistemaVentas.Infrastructure.Settings
 {
-    internal class CsvSettings
+    public class CsvSettings
     {
+        public string BasePath { get; set; } = string.Empty;
+        public string CustomersFile { get; set; } = string.Empty;
+        public string ProductsFile { get; set; } = string.Empty;
+        public string OrdersFile { get; set; } = string.Empty;
+        public string OrderDetailsFile { get; set; } = string.Empty;
     }
 }

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaVentas.Infrastructure.Settings
+﻿namespace SistemaVentas.Infrastructure.Settings
 {
-    internal class DatabaseSettings
+    public class DatabaseSettings
     {
+        public string ConnectionString { get; set; } = string.Empty;
+        public string ExtractionQuery { get; set; } = string.Empty;
     }
 }
