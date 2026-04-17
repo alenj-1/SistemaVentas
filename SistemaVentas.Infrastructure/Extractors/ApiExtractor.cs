@@ -14,10 +14,7 @@ namespace SistemaVentas.Infrastructure.Extractors
 
         public string SourceName => "REST API";
 
-        public ApiExtractor(
-            IApiClient<OrderTracking> apiClient,
-            IStagingService stagingService,
-            ILoggerService loggerService)
+        public ApiExtractor(IApiClient<OrderTracking> apiClient, IStagingService stagingService, ILoggerService loggerService)
         {
             _apiClient = apiClient;
             _stagingService = stagingService;

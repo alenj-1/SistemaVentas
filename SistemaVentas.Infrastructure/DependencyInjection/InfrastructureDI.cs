@@ -56,6 +56,8 @@ namespace SistemaVentas.Infrastructure.DependencyInjection
             services.AddScoped<IExtractor, DatabaseExtractor>();
             services.AddScoped<IExtractor, ApiExtractor>();
 
+            services.AddScoped<IDataWarehouseLoadService, DataWarehouseLoadService>();
+
             return services;
         }
     }
