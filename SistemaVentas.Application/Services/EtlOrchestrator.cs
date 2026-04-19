@@ -17,6 +17,7 @@ namespace SistemaVentas.Application.Services
         }
 
 
+        // Ejecuta el proceso de forma asíncrona y retorna sus métricas de ejecución
         public async Task<ProcessMetrics> RunAsync(CancellationToken cancellationToken = default)
         {
             var metrics = new ProcessMetrics
@@ -51,7 +52,7 @@ namespace SistemaVentas.Application.Services
                     // Si un extractor falla, se registra el error pero el proceso no se cae en ese momento
                     _loggerService.LogError($"Error running the Extraction: {extractor.SourceName}", ex);
 
-                    // Se agrega el resultado fallido para dejar evidencia en métricas
+                    // Se agrega el resultado fallido para dejar evidencia en las métricas
                     metrics.Results.Add(new ExtractionResult
                     {
                         SourceName = extractor.SourceName,

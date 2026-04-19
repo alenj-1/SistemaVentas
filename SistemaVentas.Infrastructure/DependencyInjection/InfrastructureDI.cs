@@ -56,6 +56,7 @@ namespace SistemaVentas.Infrastructure.DependencyInjection
             services.AddScoped<IExtractor, DatabaseExtractor>();
             services.AddScoped<IExtractor, ApiExtractor>();
 
+            // Registro de la interfaz que permite la carga de datos
             services.AddScoped<IDataWarehouseLoadService, DataWarehouseLoadService>();
 
             return services;
